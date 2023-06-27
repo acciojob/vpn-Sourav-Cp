@@ -20,7 +20,7 @@ public class User {
 
     private String originalIp;
 
-    private boolean connected;
+    private Boolean connected;
 
     @ManyToMany
     @JoinColumn
