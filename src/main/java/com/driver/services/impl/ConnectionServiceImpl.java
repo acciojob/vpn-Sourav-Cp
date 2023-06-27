@@ -24,7 +24,7 @@ public class ConnectionServiceImpl implements ConnectionService {
 
         User user = userRepository2.findById(userId).get();
 
-        if(user.isConnected()) throw new Exception("Already connected");
+        if(user.getConnected()) throw new Exception("Already connected");
 
         Country country = new Country();
         country.enrich(countryName);
@@ -73,7 +73,7 @@ public class ConnectionServiceImpl implements ConnectionService {
     public User disconnect(int userId) throws Exception {
 
         User user = userRepository2.findById(userId).get();
-        if(! user.isConnected()) throw new Exception("Already disconnected");
+        if(! user.getConnected()) throw new Exception("Already disconnected");
 
         user.setConnected(false);
         user.setMaskedIp(null);
@@ -89,7 +89,7 @@ public class ConnectionServiceImpl implements ConnectionService {
 
         CountryName receiverCountryName = null;
 
-        if(receiver.isConnected())
+        if(receiver.getConnected())
         {
             String maskedCode = receiver.getMaskedIp().substring(0,3);
             if(maskedCode.equals("001"))

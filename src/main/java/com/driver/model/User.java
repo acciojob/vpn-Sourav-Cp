@@ -72,7 +72,7 @@ public class User {
         this.originalIp = originalIp;
     }
 
-    public boolean isConnected() {
+    public boolean getConnected() {
         return connected;
     }
 
