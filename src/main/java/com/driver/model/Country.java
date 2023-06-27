@@ -68,27 +68,27 @@ public class Country {
     {
         String updatedName = countryName.toUpperCase();
 
-        if(countryName.equals("IND"))
+        if(updatedName.equals("IND"))
         {
             this.setCountryName(CountryName.IND);
             this.setCode(CountryName.IND.toCode());
         }
-        else if(countryName.equals("USA"))
+        else if(updatedName.equals("USA"))
         {
             this.setCountryName(CountryName.USA);
             this.setCode(CountryName.USA.toCode());
         }
-        else if(countryName.equals("AUS"))
+        else if(updatedName.equals("AUS"))
         {
             this.setCountryName(CountryName.AUS);
             this.setCode(CountryName.AUS.toCode());
         }
-        else if(countryName.equals("CHI"))
+        else if(updatedName.equals("CHI"))
         {
             this.setCountryName(CountryName.CHI);
             this.setCode(CountryName.CHI.toCode());
         }
-        else if(countryName.equals("JPN"))
+        else if(updatedName.equals("JPN"))
         {
             this.setCountryName(CountryName.JPN);
             this.setCode(CountryName.JPN.toCode());
